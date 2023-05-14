@@ -29,4 +29,5 @@
     <string name="sample_name">Shubham Singh</string>
     <string name="sample_message">Hi, how are you?</string>
     <string name="sample_time">10:30 AM</string>
+    <string name="type_a_message">Type a message</string>
 </resources>

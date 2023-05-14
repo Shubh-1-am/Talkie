@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/sent_message_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="end"
+        android:text="Hello, how are you?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/sent_message"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp" />
+
+    <ImageView
+        android:id="@+id/sent_message_reaction_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/heart"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/sent_message_tv"
+        app:layout_constraintTop_toBottomOf="@+id/sent_message_tv"
+        android:contentDescription="@string/app_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

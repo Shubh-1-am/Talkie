@@ -1,11 +1,14 @@
 package com.example.talkie.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.talkie.R
+import com.example.talkie.activities.ChatActivity
 import com.example.talkie.databinding.RowConversationBinding
 import com.example.talkie.models.User
 
@@ -19,6 +22,13 @@ class UserAdapter (private val context: Context, private val userList: List<User
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = userList[position]
         holder.bind(user)
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            Intent(context, ChatActivity::class.java).apply {
+                putExtra("name", user.name)
+                putExtra("uid", user.userID)
+                context.startActivity(this)
+            }
+        })
     }
 
     override fun getItemCount(): Int {
